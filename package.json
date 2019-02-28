@@ -2,12 +2,13 @@
   "name": "overwatch-league-colors",
   "version": "1.0.0",
   "description": "Get Overwatch League team colors",
-  "main": "index.js",
+  "main": "lib/index.js",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d lib"
   },
   "repository": {
     "type": "git",
@@ -22,9 +23,22 @@
     "videogame"
   ],
   "author": "Tee Diang",
-  "license": "GNU-3.0",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/acupoftee/overwatch-league-colors/issues"
   },
-  "homepage": "https://github.com/acupoftee/overwatch-league-colors#readme"
+  "homepage": "https://github.com/acupoftee/overwatch-league-colors#readme",
+  "dependencies": {
+    "ramda": "^0.26.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.1.0",
+    "babel-plugin-ramda": "^2.0.0",
+    "jest": "^24.1.0"
+  }
 }

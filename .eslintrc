@@ -1,0 +1,22 @@
+{
+    "parser": "babel-eslint",
+    "extends": [
+      "eslint:recommended",
+      "airbnb",
+      "prettier"
+    ],
+    "env": {
+      "node": true,
+      "jest": true
+    },
+    "rules": {
+      "arrow-parens": "off",
+      "consistent-return": "off",
+      "import/no-dynamic-require": "off",
+      "global-require": "off",
+      "no-underscore-dangle": "off"
+    },
+    "plugins": [
+      "babel"
+    ]
+}
