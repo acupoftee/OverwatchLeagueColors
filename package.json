@@ -1,5 +1,5 @@
 {
-  "name": "overwatch-league-colors",
+  "name": "overwatchleague-colors",
   "version": "1.0.0",
   "description": "Get Overwatch League team colors",
   "main": "lib/index.js",
