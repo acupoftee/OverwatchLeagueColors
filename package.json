@@ -1,0 +1,30 @@
+{
+  "name": "overwatch-league-colors",
+  "version": "1.0.0",
+  "description": "Get Overwatch League team colors",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acupoftee/overwatch-league-colors.git"
+  },
+  "keywords": [
+    "overwatch",
+    "overwatchleague",
+    "colors",
+    "esports",
+    "blizzard",
+    "videogame"
+  ],
+  "author": "Tee Diang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/acupoftee/overwatch-league-colors/issues"
+  },
+  "homepage": "https://github.com/acupoftee/overwatch-league-colors#readme"
+}
