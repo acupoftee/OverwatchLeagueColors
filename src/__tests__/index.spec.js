@@ -45,5 +45,20 @@ describe('OwlColor', () => {
     it('should exist', () => {
       expect(getSecondaryColor).toBeDefined();
     });
+
+    it('should return undefined if pass excluded team abbreviation', () => {
+      const teamSecondaryColor = getSecondaryColor('AA');
+      expect(teamSecondaryColor).toBe(undefined);
+    });
+
+    it('should match colorSchema is pass includes uppercase abbreviation', () => {
+      const teamSecondaryColor = getSecondaryColor('BOS');
+      const validateResult = Joi.validate(teamSecondaryColor, colorSchema);
+      expect(validateResult.error).toBe(null);
+      expect(teamSecondaryColor).toEqual({
+        hex: '#EFDF00',
+        rgb: [239, 223, 0],
+      });
+    });
   });
 });
