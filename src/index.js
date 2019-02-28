@@ -1,7 +1,9 @@
-'use strict';
 
-import { compose, keys, prop, propOr, path, ifElse,
-isEmpty, identity, toUpper } from 'ramda';
+
+import {
+  compose, keys, prop, propOr, path, ifElse,
+  isEmpty, identity, toUpper, __,
+} from 'ramda';
 
 import OwlColors from './colors';
 
@@ -12,7 +14,7 @@ const getColorKeys = compose(keys, prop('colors'));
 
 /**
  * Checks if a property is empty
- * @returns {boolean}  
+ * @returns {boolean}
  */
 const checkEmpty = ifElse(isEmpty(), () => undefined, identity());
 
@@ -21,12 +23,12 @@ const checkEmpty = ifElse(isEmpty(), () => undefined, identity());
  * @param {string} key a color key
  */
 const getColorByKey = key => compose(
-    team => {
-        const colorKey = prop(key, team);
-        return path(['colors', colorKey], teams);
-    },
-    propOr({}, _, OwlColors),
-    toUpper
+  team => {
+    const colorKey = prop(key, team);
+    return path(['colors', colorKey], team);
+  },
+  propOr({}, __, OwlColors),
+  toUpper,
 );
 
 /**
@@ -38,27 +40,27 @@ export const getAllColors = () => OwlColors;
 
 /**
  * Returns a team's primary color
- * @param {string} teamAbbreviation an Overwatch League team 
+ * @param {string} teamAbbreviation an Overwatch League team
  * abbreviation (lowercase or uppercase)
- * @returns {Object} An object containing the team's 
+ * @returns {Object} An object containing the team's
  * primary color's Hexadecimal color code and RGB color code.
  */
 export const getPrimaryColor = getColorByKey('primaryColor');
 
 /**
  * Returns a team's secondary color
- * @param {string} teamAbbreviation an Overwatch League team 
+ * @param {string} teamAbbreviation an Overwatch League team
  * abbreviation (lowercase or uppercase)
- * @returns {Object} An object containing the team's 
+ * @returns {Object} An object containing the team's
  * secondary color's Hexadecimal color code and RGB color code.
  */
 export const getSecondaryColor = getColorByKey('secondaryColor');
 
 /**
  * Returns a team's tertiary color
- * @param {string} teamAbbreviation an Overwatch League team 
+ * @param {string} teamAbbreviation an Overwatch League team
  * abbreviation (lowercase or uppercase)
- * @returns {Object} An object containing the team's 
+ * @returns {Object} An object containing the team's
  * tertiary color's Hexadecimal color code and RGB color code.
  */
 export const getTertiaryColor = getColorByKey('tertiaryColor');
@@ -70,21 +72,21 @@ export const getTertiaryColor = getColorByKey('tertiaryColor');
  * for the specified team.
  */
 export const getColors = compose(
-    prop('colors'),
-    propOr({}, _, OwlColors),
-    toUpper
+  prop('colors'),
+  propOr({}, __, OwlColors),
+  toUpper,
 );
 
 /**
- * Returns the full team name of a specified 
+ * Returns the full team name of a specified
  * Overwatch League Team
  * @param {string} teamAbbreviation Overwatch League team abbreviation
  * @returns {string} an Overwatch League team name
  */
 export const getTeamName = compose(
-    prop('fullName'),
-    propOr({}, _, OwlColors),
-    toUpper
+  prop('fullName'),
+  propOr({}, __, OwlColors),
+  toUpper,
 );
 
 /**
@@ -93,10 +95,10 @@ export const getTeamName = compose(
  * @returns {atring[]} an array of Overwatch League team colors.
  */
 export const getColorList = compose(
-    compose(
-        checkEmpty,
-        getColorKeys
-    ),
-    propOr({}, _, OwlColors),
-    toUpper
+  compose(
+    checkEmpty,
+    getColorKeys,
+  ),
+  propOr({}, __, OwlColors),
+  toUpper,
 );
