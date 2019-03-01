@@ -1,5 +1,3 @@
-
-
 import {
   compose, keys, prop, propOr, path, ifElse,
   isEmpty, identity, toUpper, __,
