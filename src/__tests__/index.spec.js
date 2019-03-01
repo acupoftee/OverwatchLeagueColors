@@ -4,6 +4,7 @@ import {
 } from './schema';
 import {
   getAllColors, getPrimaryColor, getSecondaryColor, getTertiaryColor, getColors,
+  getColorList,
 } from '..';
 
 describe('OwlColor', () => {
@@ -146,6 +147,12 @@ describe('OwlColor', () => {
           rgb: [158, 162, 162],
         },
       });
+    });
+  });
+
+  describe('getColorList', () => {
+    it('should exist', () => {
+      expect(getColorList).toBeDefined();
     });
   });
 });
