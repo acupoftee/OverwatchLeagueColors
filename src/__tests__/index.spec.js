@@ -1,6 +1,6 @@
 import Joi from 'joi';
 import {
-  mainSchema, colorSchema, colorsSchema,
+  mainSchema, colorSchema, colorsSchema, colorsListSchema,
 } from './schema';
 import {
   getAllColors, getPrimaryColor, getSecondaryColor, getTertiaryColor, getColors,
@@ -153,6 +153,18 @@ describe('OwlColor', () => {
   describe('getColorList', () => {
     it('should exist', () => {
       expect(getColorList).toBeDefined();
+    });
+
+    it('should return undefined if passed a bad abbreviation', () => {
+      const teamColorsList = getColorList('OWO');
+      expect(teamColorsList).toBe(undefined);
+    });
+
+    it('should match colorsListSchema if pass includes uppercase abbreviation', () => {
+      const teamColorsList = getColorList('BOS');
+      const validateResult = Joi.validate(teamColorsList, colorsListSchema);
+      expect(validateResult.error).toBe(null);
+      expect(teamColorsList).toEqual(['darkBlue', 'yellow', 'black']);
     });
   });
 });
