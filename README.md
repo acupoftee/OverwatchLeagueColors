@@ -1,8 +1,6 @@
-<p align=center>
-<img src="https://acupoftee.github.io/images/logos.jpg" height="300">
-</p>
-<h1 align=center>Overwatch League Colors</h1>
-<p align=center> Retrieves Overwatch League team colors!</p>
+<img src="https://acupoftee.github.io/images/logos.jpg">
+# Overwatch League Colors
+> Retrieves Overwatch League team colors!
 
 [![Build Status](https://travis-ci.org/acupoftee/overwatch-league-colors.svg?branch=master)](https://travis-ci.org/acupoftee/overwatch-league-colors)
 
