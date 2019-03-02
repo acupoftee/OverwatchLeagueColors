@@ -2,10 +2,10 @@
   "name": "owl-colors",
   "version": "1.0.0",
   "description": "Get Overwatch League team colors",
-  "main": "lib/owlcolors.js",
-  "directories": {
-    "lib": "src"
-  },
+  "main": "lib/owl-colors.js",
+  "files": [
+    "index.d.ts"
+  ],
   "scripts": {
     "build": "npm run clean && microbundle build src --ignore \"**/schema.js\",\"**/*.spec.js\" -o lib --sourcemap=false -f cjs",
     "clean": "rimraf lib",

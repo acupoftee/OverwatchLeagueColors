@@ -90,7 +90,7 @@ export const getTeamName = compose(
 /**
  * Returns the color list for the specified team
  * @param {string} teamAbbreviation Overwatch League team abbreviation
- * @returns {atring[]} an array of Overwatch League team colors.
+ * @returns {string[]} an array of Overwatch League team colors.
  */
 export const getColorList = compose(
   compose(
