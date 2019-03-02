@@ -23,7 +23,7 @@ export interface TeamColor {
    * of associated hex colors
    */
   export interface Colors {
-    [teamAbbreviation: string]: {
+    [abbreviatedName: string]: {
       fullName: string;
       primaryColor: string;
       colors: TeamColors;
@@ -32,7 +32,7 @@ export interface TeamColor {
   
 /**
  * Returns all Overwatch League Colors
- * @returns {Object} returns an Object containing all
+ * @returns {Colors} returns an Object containing all
  * Overwatch League teams color data.
  */
   export function getAllColors(): Colors;
@@ -40,50 +40,50 @@ export interface TeamColor {
 
 /**
  * Returns a team's primary color
- * @param {string} teamAbbreviation an Overwatch League team
+ * @param {string} abbreviatedName an Overwatch League team
  * abbreviation (lowercase or uppercase)
  * @returns {TeamColor} An object containing the team's
  * primary color's Hexadecimal color code and RGB color code.
  */
-  export function getPrimaryColor(teamAbbreviation: string): TeamColor;
+  export function getPrimaryColor(abbreviatedName: string): TeamColor;
 
 /**
  * Returns a team's secondary color
- * @param {string} teamAbbreviation an Overwatch League team
+ * @param {string} abbreviatedName an Overwatch League team
  * abbreviation (lowercase or uppercase)
  * @returns {TeamColor} An object containing the team's
  * secondary color's Hexadecimal color code and RGB color code.
  */
-  export function getSecondaryColor(teamAbbreviation: string): TeamColor;
+  export function getSecondaryColor(abbreviatedName: string): TeamColor;
 
 /**
  * Returns a team's tertiary color
- * @param {string} teamAbbreviation an Overwatch League team
+ * @param {string} abbreviatedName an Overwatch League team
  * abbreviation (lowercase or uppercase)
  * @returns {TeamColor} An object containing the team's
  * tertiary color's Hexadecimal color code and RGB color code.
  */
-  export function getTertiaryColor(teamAbbreviation: string): TeamColor;
+  export function getTertiaryColor(abbreviatedName: string): TeamColor;
 
 /**
  * Returns all colors for a specific Overwatch League Team
- * @param {string} teamAbbreviation Overwatch League team abbreviation
+ * @param {string} abbreviatedName Overwatch League team abbreviation
  * @returns {TeamColors} a list of hexadecimal color code and RGB color code
  * for the specified team.
  */
-  export function getColors(teamAbbreviation: string): TeamColors;
+  export function getColors(abbreviatedName: string): TeamColors;
 
 /**
  * Returns the full team name of a specified
  * Overwatch League Team
- * @param {string} teamAbbreviation Overwatch League team abbreviation
+ * @param {string} abbreviatedName Overwatch League team abbreviation
  * @returns {string} an Overwatch League team name
  */
-  export function getTeamName(teamAbbreviation: string): string;
+  export function getTeamName(abbreviatedName: string): string;
 
 /**
  * Returns the color list for the specified team
- * @param {string} teamAbbreviation Overwatch League team abbreviation
+ * @param {string} abbreviatedName Overwatch League team abbreviation
  * @returns {string[]} an array of Overwatch League team colors.
  */
-  export function getColorList(teamAbbreviation: string): string[];
+  export function getColorList(abbreviatedName: string): string[];

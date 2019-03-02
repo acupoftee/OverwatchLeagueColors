@@ -38,7 +38,7 @@ export const getAllColors = () => OwlColors;
 
 /**
  * Returns a team's primary color
- * @param {string} teamAbbreviation an Overwatch League team
+ * @param {string} abbreviatedName an Overwatch League team
  * abbreviation (lowercase or uppercase)
  * @returns {Object} An object containing the team's
  * primary color's Hexadecimal color code and RGB color code.
@@ -47,7 +47,7 @@ export const getPrimaryColor = getColorByKey('primaryColor');
 
 /**
  * Returns a team's secondary color
- * @param {string} teamAbbreviation an Overwatch League team
+ * @param {string} abbreviatedName an Overwatch League team
  * abbreviation (lowercase or uppercase)
  * @returns {Object} An object containing the team's
  * secondary color's Hexadecimal color code and RGB color code.
@@ -56,7 +56,7 @@ export const getSecondaryColor = getColorByKey('secondaryColor');
 
 /**
  * Returns a team's tertiary color
- * @param {string} teamAbbreviation an Overwatch League team
+ * @param {string} abbreviatedName an Overwatch League team
  * abbreviation (lowercase or uppercase)
  * @returns {Object} An object containing the team's
  * tertiary color's Hexadecimal color code and RGB color code.
@@ -78,7 +78,7 @@ export const getColors = compose(
 /**
  * Returns the full team name of a specified
  * Overwatch League Team
- * @param {string} teamAbbreviation Overwatch League team abbreviation
+ * @param {string} abbreviatedName Overwatch League team abbreviation
  * @returns {string} an Overwatch League team name
  */
 export const getTeamName = compose(
@@ -89,7 +89,7 @@ export const getTeamName = compose(
 
 /**
  * Returns the color list for the specified team
- * @param {string} teamAbbreviation Overwatch League team abbreviation
+ * @param {string} abbreviatedName Overwatch League team abbreviation
  * @returns {string[]} an array of Overwatch League team colors.
  */
 export const getColorList = compose(

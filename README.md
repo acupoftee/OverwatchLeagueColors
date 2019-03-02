@@ -4,7 +4,10 @@
 <h1 align=center>Overwatch League Colors</h1>
 <p align=center>🎨Retrieves Overwatch League team colors!</p>
 
-## About
+[![Build Status](https://travis-ci.org/acupoftee/overwatch-league-colors.svg?branch=master)](https://travis-ci.org/acupoftee/overwatch-league-colors)
+
+
+# About
 This module retrieves the official RGB and hexadecimal color codes for all Overwatch League teams. Each team has a primary color, secondary color, and tertiary color used for their official branding. This is a useful module to use for building visual Overwatch League projects.
 ## Example Usage
 ```js
@@ -67,3 +70,137 @@ ctx.fillRect(canvas.width - side2, 0, side2, 250);
 ```
 #### Results: 
 <img src="https://acupoftee.github.io/images/banner-1.png">
+
+
+# API
+
+### getAllColors()
+> Retrieves all Overwatch League Colors 
+> 
+> **Returns:** `Object` an Object containing all color data for all
+> Overwatch League teams. All object keys use 3 letter team abbreviation
+
+### getPrimaryColor(<span style="color:gray">abbreviatedName</span>)
+> Retrieves a team's primary color.
+>  
+> **Parameter:** `string` an Overwatch League team name abbreviation (uppercase or lowercase)
+>
+> **Returns:** `Object` an Object containing primary color data for a
+> specified Overwatch League Team. All object keys use 3 letter team abbreviation, 
+> or `undefined` if passed an improper team abbreviation.
+
+**Example**
+```js
+const { getPrimaryColor } = require('owl-colors');
+
+// Los Angeles Valiant team abbreviation
+console.log(getPrimaryColor('VAL'));  
+```
+**Output**
+```js
+{ hex: '#004438', rgb: [ 0, 68, 56 ] }
+```
+
+### getSecondaryColor(<span style="color:gray">abbreviatedName</span>)
+> Retrieves a team's secondary color.
+>  
+> **Parameter:** `string` an Overwatch League team name abbreviation (uppercase or lowercase)
+>
+> **Returns:** `Object` an Object containing secondary color data for a
+> specified Overwatch League Team. All object keys use 3 letter team abbreviation, 
+> or `undefined` if passed an improper team abbreviation.
+
+**Example**
+```js
+const { getSecondaryColor } = require('owl-colors');
+
+// Paris Eternal team abbreviation
+console.log(getSecondaryColor('PAR'));  
+```
+**Output**
+```js
+{ hex: '#8D042D', rgb: [ 141, 4, 45 ] }
+```
+
+### getTertiaryColor(<span style="color:gray">abbreviatedName</span>)
+> Retrieves a team's tertiary color.
+>  
+> **Parameter:** `string` an Overwatch League team name abbreviation (uppercase or lowercase)
+>
+> **Returns:** `Object` an Object containing tertiary color data for a
+> specified Overwatch League Team. All object keys use 3 letter team abbreviation, 
+> or `undefined` if passed an improper team abbreviation.
+
+**Example**
+```js
+const { getTertiaryColor } = require('owl-colors');
+
+// Los Angeles Gladiators team abbreviation
+console.log(getTertiaryColor('GLA'));  
+```
+**Output**
+```js
+{ hex: '#ffffff', rgb: [ 255, 255, 255 ] }
+```
+
+### getColors(<span style="color:gray">abbreviatedName</span>)
+> Retrieves all colors from a specific Overwatch League team.
+>  
+> **Parameter:** `string` an Overwatch League team name abbreviation (uppercase or lowercase)
+>
+> **Returns:** `Object` an Object containing all hex and RGB color data for a specified Overwatch League Team. All object keys use 3 letter team abbreviation, or `undefined` if passed an improper team abbreviation.
+
+**Example**
+```js
+const { getColors } = require('owl-colors');
+
+// San Francisco Shock team abbreviation
+console.log(getColors('SFS'));  
+```
+**Output**
+```js
+{ 
+  gray: { hex: '#75787B', rgb: [ 117, 120, 123 ] },
+  orange: { hex: '#FC4C02', rgb: [ 252, 76, 2 ] },
+  gold: { hex: '#CAB64B', rgb: [ 202, 182, 75 ] } 
+}
+```
+### getTeamName(<span style="color:gray">abbreviatedName</span>)
+> Retrieves a team's full name.
+>  
+> **Parameter:** `string` an Overwatch League team name abbreviation (uppercase or lowercase)
+>
+> **Returns:** `string` an Overwatch League team's full name,
+> or `undefined` if passed an improper team abbreviation.
+
+**Example**
+```js
+const { getTeamName } = require('owl-colors');
+
+// London Spitfire team abbreviation
+console.log(getTeamName('LDN'));  
+```
+**Output**
+```js
+London Spitfire
+```
+
+### getColorList(<span style="color:gray">abbreviatedName</span>)
+> Retrieves a list of a team's main branding colors
+>  
+> **Parameter:** `string` an Overwatch League team name abbreviation (uppercase or lowercase)
+>
+> **Returns:** `string[]` a list of an Overwatch League team's color names
+> or `undefined` if passed an improper team abbreviation.
+
+**Example**
+```js
+const { getColorList } = require('owl-colors');
+
+// Shanghai Dragons team abbreviation
+console.log(getColorList('SHD'));
+```
+**Output**
+```js
+[ 'red', 'black', 'yellow' ]
+```
