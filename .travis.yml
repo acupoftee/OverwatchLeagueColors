@@ -1,4 +1,9 @@
+# node js example
 language: node_js
 node_js:
   - "stable"
 script: npm run-script build
+cache:
+  yarn: true
+  directories:
+    - 'node_modules'
