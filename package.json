@@ -1,6 +1,6 @@
 {
   "name": "owl-colors",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "description": "Get Overwatch League team colors",
   "main": "lib/owl-colors.js",
   "files": [
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/acupoftee/overwatch-league-colors.git"
+    "url": "git+https://github.com/acupoftee/OverwatchLeagueColors.git"
   },
   "keywords": [
     "overwatch",
@@ -32,9 +32,9 @@
   "author": "Tee Diang",
   "license": "GPLv3",
   "bugs": {
-    "url": "https://github.com/acupoftee/overwatch-league-colors/issues"
+    "url": "https://github.com/acupoftee/OverwatchLeagueColors/issues"
   },
-  "homepage": "https://github.com/acupoftee/overwatch-league-colors#readme",
+  "homepage": "https://github.com/acupoftee/OverwatchLeagueColors#readme",
   "dependencies": {
     "ramda": "^0.26.1"
   },
