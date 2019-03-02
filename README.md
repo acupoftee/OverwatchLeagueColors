@@ -9,6 +9,11 @@
 
 # About
 This module retrieves the official RGB and hexadecimal color codes for all Overwatch League teams. Each team has a primary color, secondary color, and tertiary color used for their official branding. This is a useful module to use for building visual Overwatch League projects. 
+
+# Installation
+```js
+npm install owl-colors
+```
 ## Example Usage
 ```js
 // We'll use chalk for displaying color on the console
