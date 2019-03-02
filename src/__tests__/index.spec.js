@@ -4,7 +4,7 @@ import {
 } from './schema';
 import {
   getAllColors, getPrimaryColor, getSecondaryColor, getTertiaryColor, getColors,
-  getColorList,
+  getColorList, getTeamName,
 } from '..';
 
 describe('OwlColor', () => {
@@ -26,7 +26,7 @@ describe('OwlColor', () => {
       expect(getPrimaryColor).toBeDefined();
     });
 
-    it('should return undefined if pass excluded team abbreviation', () => {
+    it('should return undefined if passed an improper abbreviation', () => {
       const teamPrimaryColor = getPrimaryColor('BB');
       expect(teamPrimaryColor).toBe(undefined);
     });
@@ -52,7 +52,7 @@ describe('OwlColor', () => {
       expect(getSecondaryColor).toBeDefined();
     });
 
-    it('should return undefined if pass excluded team abbreviation', () => {
+    it('should return undefined if passed an improper abbreviation', () => {
       const teamSecondaryColor = getSecondaryColor('AA');
       expect(teamSecondaryColor).toBe(undefined);
     });
@@ -78,7 +78,7 @@ describe('OwlColor', () => {
       expect(getTertiaryColor).toBeDefined();
     });
 
-    it('should return undefined if pass excluded team abbreviation', () => {
+    it('should return undefined if passed an improper abbreviation', () => {
       const teamTertiaryColor = getTertiaryColor('UWU');
       expect(teamTertiaryColor).toBe(undefined);
     });
@@ -155,7 +155,7 @@ describe('OwlColor', () => {
       expect(getColorList).toBeDefined();
     });
 
-    it('should return undefined if passed a bad abbreviation', () => {
+    it('should return undefined if passed an improper abbreviation', () => {
       const teamColorsList = getColorList('OWO');
       expect(teamColorsList).toBe(undefined);
     });
@@ -165,6 +165,36 @@ describe('OwlColor', () => {
       const validateResult = Joi.validate(teamColorsList, colorsListSchema);
       expect(validateResult.error).toBe(null);
       expect(teamColorsList).toEqual(['darkBlue', 'yellow', 'black']);
+    });
+
+    it('should match colorsListSchema if pass includes lowercase abbreviation', () => {
+      const teamColorsList = getColorList('bos');
+      const validateResult = Joi.validate(teamColorsList, colorsListSchema);
+      expect(validateResult.error).toBe(null);
+      expect(teamColorsList).toEqual(['darkBlue', 'yellow', 'black']);
+    });
+  });
+
+  describe('getTeamName', () => {
+    it('should exist', () => {
+      expect(getTeamName).toBeDefined();
+    });
+
+    it('should return undefined if passed an improper abbreviation', () => {
+      const teamName = getTeamName('OWO');
+      expect(teamName).toBe(undefined);
+    });
+
+    it('should return full name if pass includes uppercase abbreviation', () => {
+      const teamName = getTeamName('BOS');
+      expect(typeof teamName).toBe('string');
+      expect(teamName).toEqual('Boston Uprising');
+    });
+
+    it('should return full name if pass includes lowercase abbreviation', () => {
+      const teamName = getTeamName('bos');
+      expect(typeof teamName).toBe('string');
+      expect(teamName).toEqual('Boston Uprising');
     });
   });
 });
