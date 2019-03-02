@@ -2,13 +2,13 @@
 <img src="https://acupoftee.github.io/images/logos.jpg" height="300">
 </p>
 <h1 align=center>Overwatch League Colors</h1>
-<p align=center>🎨Retrieves Overwatch League team colors!</p>
+<p align=center> Retrieves Overwatch League team colors!</p>
 
 [![Build Status](https://travis-ci.org/acupoftee/overwatch-league-colors.svg?branch=master)](https://travis-ci.org/acupoftee/overwatch-league-colors)
 
 
 # About
-This module retrieves the official RGB and hexadecimal color codes for all Overwatch League teams. Each team has a primary color, secondary color, and tertiary color used for their official branding. This is a useful module to use for building visual Overwatch League projects.
+This module retrieves the official RGB and hexadecimal color codes for all Overwatch League teams. Each team has a primary color, secondary color, and tertiary color used for their official branding. This is a useful module to use for building visual Overwatch League projects. *Inspired by [NBA-Color](https://www.npmjs.com/package/nba-color)*.
 ## Example Usage
 ```js
 // We'll use chalk for displaying color on the console
