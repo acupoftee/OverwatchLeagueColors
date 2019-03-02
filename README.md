@@ -1,6 +1,6 @@
 <img src="https://acupoftee.github.io/images/logos.jpg">
-# Overwatch League Colors
 
+# Overwatch League Colors
 Retrieves Overwatch League team colors!
 
 [![Build Status](https://travis-ci.org/acupoftee/overwatch-league-colors.svg?branch=master)](https://travis-ci.org/acupoftee/overwatch-league-colors)
