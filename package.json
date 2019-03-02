@@ -1,6 +1,6 @@
 {
   "name": "owl-colors",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Get Overwatch League team colors",
   "main": "lib/owl-colors.js",
   "files": [
