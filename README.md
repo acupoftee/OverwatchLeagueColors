@@ -14,7 +14,7 @@ This module retrieves the official RGB and hexadecimal color codes for all Overw
 
 # Installation
 ```
-npm install owl-colors
+$ npm install owl-colors
 ```
 ## Example Usage
 ```js
