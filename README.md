@@ -3,7 +3,7 @@
 # Overwatch League Colors
 > Retrieves Overwatch League team colors!
 
-[![Build Status](https://travis-ci.org/acupoftee/overwatch-league-colors.svg?branch=master)](https://travis-ci.org/acupoftee/overwatch-league-colors)
+[![Build Status](https://travis-ci.org/acupoftee/OverwatchLeagueColors.svg?branch=master)](https://travis-ci.org/acupoftee/OverwatchLeagueColors)
 
 <p align=center>
 <img src="https://acupoftee.github.io/images/logos.jpg" height="300">
@@ -14,7 +14,7 @@ This module retrieves the official RGB and hexadecimal color codes for all Overw
 
 # Installation
 ```
-npm install owl-colors
+$ npm install owl-colors
 ```
 ## Example Usage
 ```js
