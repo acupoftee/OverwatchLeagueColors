@@ -1,10 +1,18 @@
 import Joi from 'joi';
 import {
-  mainSchema, colorSchema, colorsSchema, colorsListSchema,
+  mainSchema,
+  colorSchema,
+  colorsSchema,
+  colorsListSchema,
 } from './schema';
 import {
-  getAllColors, getPrimaryColor, getSecondaryColor, getTertiaryColor, getColors,
-  getColorList, getTeamName,
+  getAllColors,
+  getPrimaryColor,
+  getSecondaryColor,
+  getTertiaryColor,
+  getColors,
+  getColorList,
+  getTeamName,
 } from '..';
 
 describe('OwlColor', () => {
@@ -119,7 +127,7 @@ describe('OwlColor', () => {
           rgb: [3, 35, 64],
         },
         strongBlue: {
-          hex: '#0072ce',
+          hex: '#0072CE',
           rgb: [0, 114, 206],
         },
         gray: {
@@ -139,7 +147,7 @@ describe('OwlColor', () => {
           rgb: [3, 35, 64],
         },
         strongBlue: {
-          hex: '#0072ce',
+          hex: '#0072CE',
           rgb: [0, 114, 206],
         },
         gray: {
