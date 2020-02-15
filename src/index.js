@@ -1,6 +1,14 @@
 import {
-  compose, keys, prop, propOr, path, ifElse,
-  isEmpty, identity, toUpper, __,
+  compose,
+  keys,
+  prop,
+  propOr,
+  path,
+  ifElse,
+  isEmpty,
+  identity,
+  toUpper,
+  __,
 } from 'ramda';
 
 import OwlColors from './colors';
@@ -93,10 +101,7 @@ export const getTeamName = compose(
  * @returns {string[]} an array of Overwatch League team colors.
  */
 export const getColorList = compose(
-  compose(
-    checkEmpty,
-    getColorKeys,
-  ),
+  compose(checkEmpty, getColorKeys),
   propOr({}, __, OwlColors),
   toUpper,
 );

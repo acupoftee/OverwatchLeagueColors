@@ -1,4 +1,3 @@
-
 const pureWhite = {
   hex: '#ffffff',
   rgb: [255, 255, 255],
@@ -23,7 +22,7 @@ const colors = {
         rgb: [3, 35, 64],
       },
       strongBlue: {
-        hex: '#0072ce',
+        hex: '#0072CE',
         rgb: [0, 114, 206],
       },
       gray: {
@@ -91,19 +90,19 @@ const colors = {
   },
   FLA: {
     fullName: 'Florida Mayhem',
-    primaryColor: 'yellow',
-    secondaryColor: 'darkRed',
-    tertiaryColor: 'black',
+    primaryColor: 'black',
+    secondaryColor: 'pink',
+    tertiaryColor: 'blue',
     colors: {
-      yellow: {
-        hex: '#FEDB00',
-        rgb: [254, 219, 0],
-      },
-      darkRed: {
-        hex: '#AF272F',
-        rgb: [175, 39, 47],
-      },
       black: pureBlack,
+      pink: {
+        hex: '#CF4691',
+        rgb: [207, 70, 145],
+      },
+      blue: {
+        hex: '#3DB2E3',
+        rgb: [61, 178, 227],
+      },
     },
   },
   GLA: {
@@ -142,8 +141,8 @@ const colors = {
   },
   HOU: {
     fullName: 'Houston Outlaws',
-    primaryColor: 'green',
-    secondaryColor: 'black',
+    primaryColor: 'black',
+    secondaryColor: 'green',
     tertiaryColor: 'white',
     colors: {
       green: {
@@ -264,21 +263,18 @@ const colors = {
   },
   SFS: {
     fullName: 'San Francisco Shock',
-    primaryColor: 'gray',
-    secondaryColor: 'orange',
-    tertiaryColor: 'gold',
+    primaryColor: 'black',
+    secondaryColor: 'gray',
+    tertiaryColor: 'orange',
     colors: {
+      black: pureBlack,
       gray: {
-        hex: '#75787B',
-        rgb: [117, 120, 123],
+        hex: '#A5ACAF',
+        rgb: [165, 172, 175],
       },
       orange: {
         hex: '#FC4C02',
         rgb: [252, 76, 2],
-      },
-      gold: {
-        hex: '#CAB64B',
-        rgb: [202, 182, 75],
       },
     },
   },
@@ -318,19 +314,19 @@ const colors = {
   },
   VAL: {
     fullName: 'Los Angeles Valiant',
-    primaryColor: 'darkGreen',
-    secondaryColor: 'black',
-    tertiaryColor: 'yellow',
+    primaryColor: 'blue',
+    secondaryColor: 'yellow',
+    tertiaryColor: 'white',
     colors: {
-      darkGreen: {
-        hex: '#004438',
-        rgb: [0, 68, 56],
+      blue: {
+        hex: '#1888C6',
+        rgb: [24, 136, 198],
       },
-      black: pureBlack,
       yellow: {
-        hex: '#D9C756',
-        rgb: [217, 199, 86],
+        hex: '#FFD100',
+        rgb: [255, 209, 0],
       },
+      white: pureWhite,
     },
   },
   VAN: {
